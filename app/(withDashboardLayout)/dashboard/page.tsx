@@ -1,11 +1,8 @@
-import {ChartAreaInteractive} from '@/components/chart-area-interactive';
-import {DataTable} from '@/components/data-table';
-
-import data from './data.json';
 import {Button} from '@/components/ui/button';
 import SelectMonth from '@/components/shared/common/SelectMonth';
 import Chart from '@/components/pages/Dashboard/Chart';
 import RecruitmentEmployeeEngagement from '@/components/pages/Dashboard/RecruitmentEmployeeEngagement';
+import AlertsNotifications from '@/components/pages/Dashboard/AlertsNotifications';
 
 export default function Page() {
   return (
@@ -24,9 +21,8 @@ export default function Page() {
 
               <Chart />
               <RecruitmentEmployeeEngagement />
-              <ChartAreaInteractive />
+              <AlertsNotifications />
             </div>
-            <DataTable data={data} />
           </div>
         </div>
       </div>

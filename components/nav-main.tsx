@@ -10,7 +10,7 @@ import {
   SidebarMenuItem,
 } from '@/components/ui/sidebar';
 import {cn} from '@/lib/utils';
-import {Icon} from '@tabler/icons-react';
+import {type LucideIcon} from 'lucide-react';
 
 export function NavMain({
   items,
@@ -18,7 +18,7 @@ export function NavMain({
   items: {
     title: string;
     url: string;
-    icon: Icon;
+    icon: LucideIcon;
   }[];
 }) {
   const pathname = usePathname();

@@ -32,7 +32,7 @@ const FinancialStats = () => {
 
       <Card className="p-4">
         <CardHeader className="pb-4">
-          <CardTitle className="text-lg font-semibold">Total Sales</CardTitle>
+          <CardTitle className="text-xl font-semibold">Total Sales</CardTitle>
           <p className="text-sm text-muted-foreground">
             Improved from last month
           </p>

@@ -32,7 +32,7 @@ const SelectMonth = () => {
           variant="outline"
           role="combobox"
           aria-expanded={open}
-          className="w-[150px] justify-between rounded-full cursor-pointer">
+          className="w-[150px] justify-between rounded-full cursor-pointer text-gray-600">
           {value
             ? months.find((month) => month.value === value)?.label
             : 'Monthly'}

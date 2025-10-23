@@ -11,15 +11,9 @@ import {BellDot, SearchIcon} from 'lucide-react';
 import {NavUser} from './nav-user';
 import {sidebarItems} from '@/constants';
 
-// user: {
-//     name: 'shadcn',
-//     email: 'm@example.com',
-//     avatar: '/avatars/shadcn.jpg',
-//   },
-
 export function SiteHeader() {
   return (
-    <header className="flex  h-(--header-height) shrink-0 items-center gap-2 border-b transition-[width,height] ease-linear group-has-data-[collapsible=icon]/sidebar-wrapper:h-(--header-height)">
+    <header className="flex py-4 shrink-0 items-center gap-2 border-b transition-[width,height] ease-linear group-has-data-[collapsible=icon]/sidebar-wrapper:h-(--header-height)">
       <div className="flex w-full items-center gap-1 px-4 lg:gap-2 lg:px-6">
         <SidebarTrigger className="-ml-1" />
         <Separator
@@ -33,7 +27,6 @@ export function SiteHeader() {
           </InputGroupAddon>
         </InputGroup>
         <div className="ml-auto flex items-center gap-2">
-          {/* <ThemeSelector /> */}
           <ModeSwitcher />
           <span className="p-2 border-1 border-gray-300 rounded-full cursor-pointer flex justify-center items-center">
             <BellDot className="w-4 h-4 " />
