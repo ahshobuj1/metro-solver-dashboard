@@ -5,6 +5,7 @@ import data from './data.json';
 import {Button} from '@/components/ui/button';
 import SelectMonth from '@/components/shared/common/SelectMonth';
 import Chart from '@/components/pages/Dashboard/Chart';
+import RecruitmentEmployeeEngagement from '@/components/pages/Dashboard/RecruitmentEmployeeEngagement';
 
 export default function Page() {
   return (
@@ -17,14 +18,12 @@ export default function Page() {
                 <p className="text-xl font-medium">Employee Management</p>
                 <div>
                   <SelectMonth />
-
-                  <Button className="bg-[linear-gradient(90deg,#41295A_0%,#2F0743_100%)]  rounded-full ml-4 cursor-pointer">
-                    View Details
-                  </Button>
+                  <Button variant="metroSolver">View Details</Button>
                 </div>
               </div>
 
               <Chart />
+              <RecruitmentEmployeeEngagement />
               <ChartAreaInteractive />
             </div>
             <DataTable data={data} />
