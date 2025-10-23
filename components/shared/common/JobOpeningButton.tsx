@@ -15,13 +15,18 @@ import {
 } from '@/components/ui/command';
 import {Popover, PopoverContent, PopoverTrigger} from '@/components/ui/popover';
 
-const months = [
-  {value: 'monthly', label: 'Monthly'},
-  {value: 'quarterly', label: 'Quarterly'},
-  {value: 'yearly', label: 'Yearly'},
+const recruitmentMetrics = [
+  {value: 'job-openings', label: 'Job Openings'},
+  {value: 'new-hires', label: 'New Hires'},
+  {value: 'applications-received', label: 'Applications Received'},
+  {value: 'interview-stage', label: 'Interview Stage'},
+  {value: 'attendance-rate', label: 'Attendance Rate'},
+  {value: 'absenteeism-rate', label: 'Absenteeism Rate'},
+  {value: 'cash-flow-status', label: 'Cash Flow Status'},
+  {value: 'current-balance', label: 'Current Balance'},
 ];
 
-const SelectMonth = () => {
+const JobOpeningButton = () => {
   const [open, setOpen] = React.useState(false);
   const [value, setValue] = React.useState('');
 
@@ -32,32 +37,34 @@ const SelectMonth = () => {
           variant="outline"
           role="combobox"
           aria-expanded={open}
-          className="md:w-[150px] justify-between rounded-full cursor-pointer text-gray-600">
+          className="w-[150px] justify-between bg-[linear-gradient(90deg,#41295A_0%,#2F0743_100%)]  rounded-full ml-4 cursor-pointer text-white hover:text-white">
           {value
-            ? months.find((month) => month.value === value)?.label
-            : 'Monthly'}
+            ? recruitmentMetrics.find(
+                (recruitment) => recruitment.value === value
+              )?.label
+            : 'Job Openings'}
           <ChevronDown className="opacity-50" />
         </Button>
       </PopoverTrigger>
       <PopoverContent className="w-[200px] p-0">
         <Command>
-          <CommandInput placeholder="Search month..." className="h-9" />
+          <CommandInput placeholder="Search recruitment..." className="h-9" />
           <CommandList>
-            <CommandEmpty>No month found.</CommandEmpty>
+            <CommandEmpty>No recruitment found.</CommandEmpty>
             <CommandGroup>
-              {months.map((month) => (
+              {recruitmentMetrics.map((recruitment) => (
                 <CommandItem
-                  key={month.value}
-                  value={month.value}
+                  key={recruitment.value}
+                  value={recruitment.value}
                   onSelect={(currentValue) => {
                     setValue(currentValue === value ? '' : currentValue);
                     setOpen(false);
                   }}>
-                  {month.label}
+                  {recruitment.label}
                   <Check
                     className={cn(
                       'ml-auto',
-                      value === month.value ? 'opacity-100' : 'opacity-0'
+                      value === recruitment.value ? 'opacity-100' : 'opacity-0'
                     )}
                   />
                 </CommandItem>
@@ -70,4 +77,4 @@ const SelectMonth = () => {
   );
 };
 
-export default SelectMonth;
+export default JobOpeningButton;

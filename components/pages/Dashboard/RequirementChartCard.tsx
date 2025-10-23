@@ -4,8 +4,8 @@ import {Button} from '@/components/ui/button';
 import {Card, CardContent, CardHeader, CardTitle} from '@/components/ui/card';
 import type {ApexOptions} from 'apexcharts';
 import SelectMonth from '@/components/shared/common/SelectMonth';
-import {ChevronDown} from 'lucide-react';
 import dynamic from 'next/dynamic';
+import JobOpeningButton from '@/components/shared/common/JobOpeningButton';
 
 const RecruitmentChartCard = () => {
   const chartOptions: ApexOptions = {
@@ -98,7 +98,7 @@ const RecruitmentChartCard = () => {
 
   return (
     <div>
-      <div className="flex flex-wrap items-center justify-between gap-2 mb-4">
+      <div className="flex items-center justify-between gap-2 mb-4">
         <CardTitle className="text-xl font-medium">
           Recruitment & Employee Engagement
         </CardTitle>
@@ -108,10 +108,7 @@ const RecruitmentChartCard = () => {
       <Card className="max-h-[360px]">
         <CardHeader>
           <div className="flex flex-wrap items-center justify-between gap-4">
-            <Button variant={'metroSolver'} className="flex items-center">
-              Job Openings <ChevronDown className="opacity-50" />
-            </Button>
-
+            <JobOpeningButton />
             <SelectMonth />
           </div>
         </CardHeader>

@@ -13,7 +13,7 @@ export default function Page() {
             <div className="px-4 lg:px-6">
               <div className="flex justify-between items-center mb-4">
                 <p className="text-xl font-medium">Employee Management</p>
-                <div>
+                <div className="flex gap-1">
                   <SelectMonth />
                   <Button variant="metroSolver">View Details</Button>
                 </div>
